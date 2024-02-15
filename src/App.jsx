@@ -1,8 +1,12 @@
-import './App.css'
+import GetStarted from "./components/GetStarted/GetStarted";
+import "./App.css";
 
 function App() {
-
-  return <h1>Hello, World!</h1>
+  return (
+    <div>
+      <GetStarted></GetStarted>
+    </div>
+  );
 }
 
-export default App
+export default App;
