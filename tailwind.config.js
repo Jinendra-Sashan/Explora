@@ -10,7 +10,7 @@ export default {
         'primary': ['Poppins']
       },
       backgroundImage: {
-        'background': 'url(./src/assets/background.jpeg)'
+        'background': 'url(./public/background.jpeg)'
       }
     },
   },
