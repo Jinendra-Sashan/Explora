@@ -35,7 +35,7 @@ export default {
         }
       },
       animation: {
-        button: 'button-animation 4s ease-in-out',
+        button: 'button-animation 3s ease-in-out',
       }
     },
   },
