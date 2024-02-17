@@ -22,7 +22,6 @@ export default {
             transform: "translateX(-500%)",
             opacity: "1",
             visibility: "hidden",
-            animationDelay: "15s",
           },
           "100%": {
             transform: "translateX(0)",
