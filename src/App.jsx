@@ -1,10 +1,10 @@
-import GetStarted from "./components/GetStarted/GetStarted";
+import Welcome from "./pages/Welcome";
 import "./App.css";
 
 function App() {
   return (
     <div>
-      <GetStarted></GetStarted>
+      <Welcome></Welcome>
     </div>
   );
 }
