@@ -12,8 +12,7 @@ export default {
       },
       colors: {
         getstarted: {
-          light: "#f1f5f9",
-          dark: "#0f172a",
+          button: "#fdf2f2",
         },
       },
       keyframes: {
