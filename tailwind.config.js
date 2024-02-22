@@ -18,7 +18,7 @@ export default {
       keyframes: {
         "button-animation": {
           "0%": {
-            transform: "translateX(-500%)",
+            transform: "translateX(-650%)",
             opacity: "1",
             visibility: "hidden",
           },
@@ -30,7 +30,7 @@ export default {
         },
       },
       animation: {
-        button: "button-animation 4s ease-in-out",
+        button: "button-animation 4.5s ease-in-out",
       },
     },
   },
