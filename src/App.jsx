@@ -1,9 +1,9 @@
-import Welcome from "./pages/Welcome";
+import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
 
 function App() {
   return (
     <div>
-      <Welcome></Welcome>
+      <RegistrationForm></RegistrationForm>
     </div>
   );
 }

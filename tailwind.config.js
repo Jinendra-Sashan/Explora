@@ -14,6 +14,10 @@ export default {
         getstarted: {
           light: "#f1f5f9",
           dark: "#0f172a",
+          input: "#f1f5f9",
+          placeholderlight: "#111827",
+          placeholderdark: "#71717a",
+          inputdark: "#f3f4f6",
         },
       },
       keyframes: {
