@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
 import { app } from "../../firebaseConfig";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
@@ -76,6 +77,11 @@ const RegistrationForm = () => {
           </button>
         </div>
       </form>
+      <br />
+      <br />
+      <div className="flex flex-col items-center justify-center">
+      <p className="text-base">If You Already Have An Explora Account,<Link to="/signin" className="text-blue-400 hover:text-blue-300"> Sign In</Link></p>
+      </div>
     </div>
   );
 };
