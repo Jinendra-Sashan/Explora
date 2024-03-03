@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { app } from "../../firebaseConfig";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-const RegistrationForm = () => {
+const LoginForm = () => {
   const auth = getAuth();
 
-  const [data, setData] = useState({ name: "", email: "", password: "" });
+  const [data, setData] = useState({ email: "", password: "" });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -19,13 +18,10 @@ const RegistrationForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await createUserWithEmailAndPassword(auth, data.email, data.password);
-      console.log("The user was successfully registered.");
+      await signInWithEmailAndPassword(auth, data.email, data.password);
+      console.log("The user was successfully logged in.");
     } catch (error) {
-      console.error(
-        "There was an error in registering the user:",
-        error.message,
-      );
+      console.error("There was an error logging in the user: ", error.message);
     }
   };
 
@@ -36,7 +32,7 @@ const RegistrationForm = () => {
         Welcome To Explora
       </h1>
       <h2 className="pb-12 text-center font-primary mobile:text-base sm:text-base md:text-lg lg:text-xl xl:text-xl dark:text-white">
-        Create Your Own Explora Account
+        Sign In To Your Own Explora Account
       </h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -75,7 +71,7 @@ const RegistrationForm = () => {
             type="submit"
             className="rounded-full bg-black p-3 px-8 font-primary font-semibold uppercase tracking-wider text-white hover:bg-getstarted-dark mobile:text-sm sm:text-base md:text-xl lg:text-xl dark:bg-white dark:text-black dark:hover:bg-getstarted-light"
           >
-            Sign Up
+            Sign In
           </button>
         </div>
       </form>
@@ -83,13 +79,13 @@ const RegistrationForm = () => {
       <br />
       <div className="flex flex-col items-center justify-center">
         <p className="mobile:text-sm sm:text-sm md:text-sm lg:text-base xl:text-base dark:text-white">
-          If You Already Have An Explora Account,
+          If You Do Not Have An Explora Account,
           <Link
-            to="/signin"
+            to="/signup"
             className="text-blue-500 hover:text-blue-300 dark:text-blue-200 dark:hover:text-blue-100"
           >
             {" "}
-            Sign In
+            Sign Up
           </Link>
         </p>
       </div>
@@ -97,4 +93,4 @@ const RegistrationForm = () => {
   );
 };
 
-export default RegistrationForm;
+export default LoginForm;
