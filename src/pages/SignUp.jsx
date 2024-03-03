@@ -7,7 +7,6 @@ const SignUp = () => {
         <div className="flex h-screen flex-col items-center justify-center">
           <RegistrationForm></RegistrationForm>
         </div>
-        
       </div>
     </div>
   );

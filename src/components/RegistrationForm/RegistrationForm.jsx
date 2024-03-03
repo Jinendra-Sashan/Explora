@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { app } from "../../firebaseConfig";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 const RegistrationForm = () => {
+
   const auth = getAuth();
 
   const [data, setData] = useState({ name: "", email: "", password: "" });
@@ -40,7 +41,7 @@ const RegistrationForm = () => {
       </h4>
       <form onSubmit={handleSubmit}>
         <input
-          className="placeholder-getstarted-placeholder mb-8 w-full rounded-lg bg-getstarted-input px-4 py-4 leading-tight placeholder-getstarted-placeholderlight dark:bg-getstarted-inputdark dark:placeholder-getstarted-placeholderdark"
+          className="placeholder-getstarted-placeholder mb-8 w-full rounded-lg bg-getstarted-input px-4 py-4 leading-tight placeholder-getstarted-placeholderlight dark:bg-getstarted-inputdark dark:placeholder-getstarted-placeholderdark dark:text-getstarted-placeholderdark invalid:text-red-400 invalid:ring-2 invalid:ring-red-400"
           type="text"
           name="name"
           autoComplete="name"
@@ -50,7 +51,8 @@ const RegistrationForm = () => {
         />
         <br />
         <input
-          className="mb-8 w-full rounded-lg bg-getstarted-input px-4 py-4 leading-tight placeholder-getstarted-placeholderlight dark:bg-getstarted-inputdark dark:placeholder-getstarted-placeholderdark"
+          className="mb-8 w-full rounded-lg bg-getstarted-input px-4 py-4 leading-tight placeholder-getstarted-placeholderlight dark:bg-getstarted-inputdark dark:placeholder-getstarted-placeholderdark
+          dark:text-getstarted-placeholderdark invalid:text-red-400 invalid:ring-2 invalid:ring-red-400"
           type="email"
           name="email"
           autoComplete="email"
@@ -60,9 +62,11 @@ const RegistrationForm = () => {
         />
         <br />
         <input
-          className="mb-8 w-full rounded-lg bg-getstarted-input px-4 py-4 leading-tight placeholder-getstarted-placeholderlight dark:bg-getstarted-inputdark dark:placeholder-getstarted-placeholderdark"
+          className="mb-8 w-full rounded-lg bg-getstarted-input px-4 py-4 leading-tight placeholder-getstarted-placeholderlight dark:bg-getstarted-inputdark dark:placeholder-getstarted-placeholderdark
+          dark:text-getstarted-placeholderdark invalid:text-red-400 invalid:ring-2 invalid:ring-red-400"
           type="password"
           name="password"
+          minLength={8}
           placeholder="Enter Your Password"
           onChange={handleInputChange}
           value={data.password}
@@ -80,7 +84,13 @@ const RegistrationForm = () => {
       <br />
       <br />
       <div className="flex flex-col items-center justify-center">
-      <p className="text-base">If You Already Have An Explora Account,<Link to="/signin" className="text-blue-400 hover:text-blue-300"> Sign In</Link></p>
+        <p className="text-base dark:text-white">
+          If You Already Have An Explora Account,
+          <Link to="/signin" className="text-blue-400 hover:text-blue-300">
+            {" "}
+            Sign In
+          </Link>
+        </p>
       </div>
     </div>
   );
