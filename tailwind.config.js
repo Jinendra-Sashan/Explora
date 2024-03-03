@@ -20,6 +20,9 @@ export default {
           inputdark: "#343434",
         },
       },
+      screens: {
+        mobile: "300px",
+      },
       keyframes: {
         "button-animation": {
           "0%": {
