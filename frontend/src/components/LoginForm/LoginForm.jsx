@@ -68,15 +68,15 @@ const LoginForm = () => {
         />
         <br />
         <div className="flex justify-end text-right">
-        <p className="mobile:text-sm sm:text-sm md:text-sm lg:text-base xl:text-base dark:text-white">
-          <Link
-            to="/forgotpassword"
-            className="text-blue-500 hover:text-blue-300 dark:text-blue-200 dark:hover:text-blue-100"
-          >
-            {" "}
-            Forgot Password
-          </Link>
-        </p>
+          <p className="mobile:text-sm sm:text-sm md:text-sm lg:text-base xl:text-base dark:text-white">
+            <Link
+              to="/forgotpassword"
+              className="text-blue-500 hover:text-blue-300 dark:text-blue-200 dark:hover:text-blue-100"
+            >
+              {" "}
+              Forgot Password
+            </Link>
+          </p>
         </div>
         <br />
         <div className="flex items-center justify-center">
