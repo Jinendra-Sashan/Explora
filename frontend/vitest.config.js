@@ -1,5 +1,6 @@
-export default ({
-  testMatch: "**/tests/**/*.{spec,test}.{js,jsx}",
-  testEnvironment: "jsdom",
-  setupFiles: ["./tests/setup.js"],
-});
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+ plugins: [react()],
+})
