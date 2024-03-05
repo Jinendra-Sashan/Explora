@@ -2,7 +2,7 @@ import { useState } from "react";
 import { app } from "../../firebaseConfig";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 
-const ForgotPassword = () => {
+const ForgotPasswordForm = () => {
   const auth = getAuth();
 
   const [email, setEmail] = useState("");
@@ -32,7 +32,7 @@ const ForgotPassword = () => {
         Welcome To Explora
       </h1>
       <h2 className="pb-12 text-center font-primary mobile:text-base sm:text-base md:text-lg lg:text-xl xl:text-xl dark:text-white">
-        Reset Your Password To Your Own Explora Account
+        Reset Your Explora Account's Password
       </h2>
       <form onSubmit={handleFormSubmit}>
         <input
@@ -43,8 +43,9 @@ const ForgotPassword = () => {
           autoComplete="email"
           placeholder="Enter Your Email Address"
           onChange={handleInputChange}
-          value={data.email}
+          value={email}
         />
+        <br />
         <br />
         <div className="flex items-center justify-center">
           <button
@@ -55,9 +56,8 @@ const ForgotPassword = () => {
           </button>
         </div>
       </form>
-      {message && <p>{message}</p>}
     </div>
   );
 };
 
-export default ForgotPassword;
+export default ForgotPasswordForm;
