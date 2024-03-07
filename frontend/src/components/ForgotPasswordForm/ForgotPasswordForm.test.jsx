@@ -1,6 +1,13 @@
 import React from "react";
 import { render, fireEvent, waitFor } from "@testing-library/react";
+import { getAuth } from "firebase/auth";
 import ForgotPasswordForm from "./ForgotPasswordForm";
+
+jest.mock("firebase/auth", () => ({
+  getAuth: jest.fn(() => ({
+    sendPasswordResetEmail: jest.fn(() => Promise.resolve()),
+  })),
+}));
 
 describe("ForgotPasswordForm", () => {
   it("renders the form and allows user to submit", async () => {
