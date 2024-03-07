@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { app } from "../../firebaseConfig";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
