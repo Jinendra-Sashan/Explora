@@ -1,0 +1,87 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-image: url("Images/background.png");
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(50px);
+}
+
+.background-container {
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(100px);
+  border-radius: 20px;
+}
+
+.task-container {
+  margin-bottom: 10px;
+}
+
+.task-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.task-text {
+  overflow-wrap: break-word;
+  color: black;
+}
+
+.delete-button {
+  width: 25px;
+  height: 20px;
+  background-image: url("Images/delete.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.Add-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
+  background-image: url("Images/add.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+}
+
+
+.Add-textbox {
+  margin-bottom: 50px;
+}
+
+.div {
+  width: 550px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+}
+
