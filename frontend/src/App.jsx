@@ -3,15 +3,13 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import ForgotPassword from "./pages/ForgotPassword";
 import Welcome from "./pages/Welcome";
+import TripDetails from "./pages/TripDetails";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/forgotpassword" element={<ForgotPassword />} />
-        <Route path="/" element={<Welcome />} />
+        <Route path="/" element={<TripDetails />} />
       </Routes>
     </Router>
   );

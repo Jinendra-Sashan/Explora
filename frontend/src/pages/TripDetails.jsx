@@ -1,8 +1,8 @@
-import PreviousButton from '../components/PreviousButton'
+import PreviousButton from '../components/PreviousButton/PreviousButton'
 
 const TripDetails = () => {
     return (
-        <PreviousButton></PreviousButton>
+        <PreviousButton to=""></PreviousButton>
     )
 }
 
