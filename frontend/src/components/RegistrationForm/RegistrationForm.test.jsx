@@ -5,12 +5,12 @@ import RegistrationForm from "./RegistrationForm";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 jest.mock("firebase/auth", () => ({
- getAuth: jest.fn(() => ({})),
- createUserWithEmailAndPassword: jest.fn(),
+  getAuth: jest.fn(() => ({})),
+  createUserWithEmailAndPassword: jest.fn(),
 }));
 
 describe("RegistrationForm", () => {
- it("handles successful registration", async () => {
+  it("handles successful registration", async () => {
     createUserWithEmailAndPassword.mockResolvedValue({
       user: {
         email: "testing@explora.com",
@@ -20,7 +20,7 @@ describe("RegistrationForm", () => {
     const { getByPlaceholderText, getByText } = render(
       <Router>
         <RegistrationForm />
-      </Router>
+      </Router>,
     );
 
     fireEvent.change(getByPlaceholderText("Enter Your Name"), {
@@ -42,5 +42,5 @@ describe("RegistrationForm", () => {
         "password",
       );
     });
- });
+  });
 });
