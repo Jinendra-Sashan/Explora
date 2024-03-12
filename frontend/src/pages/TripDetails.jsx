@@ -14,7 +14,7 @@ const TripDetails = () => {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black opacity-10"></div>
-        <h1 className=" heading-animate absolute bottom-20 left-7 px-3 py-10 font-primary font-semibold text-white mobile:bottom-28 mobile:left-3 mobile:text-6xl sm:bottom-24 sm:left-3 sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl">
+        <h1 className=" heading-animate absolute bottom-20 left-9 px-3 py-10 font-primary font-semibold text-white mobile:bottom-28 mobile:left-3 mobile:text-6xl sm:bottom-24 sm:left-3 sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl">
           Bali, Indonesia
         </h1>
         <h2 className=" subheading-animate absolute bottom-4 left-9 px-3 py-10 font-primary font-semibold text-gray-100 mobile:bottom-16 mobile:left-3 mobile:text-2xl sm:bottom-12 sm:left-3 sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl">
