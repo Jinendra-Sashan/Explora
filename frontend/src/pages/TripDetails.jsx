@@ -5,8 +5,8 @@ import TripInformationButton from "../components/TripInformationButton/TripInfor
 const TripDetails = () => {
   return (
     <div className=" fixed left-0 top-0 z-0 h-screen w-screen bg-white bg-cover bg-center dark:bg-black">
-      <PreviousButton></PreviousButton>
-      <FavouriteButton></FavouriteButton>
+      <PreviousButton to={""}></PreviousButton>
+      <FavouriteButton to={""}></FavouriteButton>
       <div className="relative h-screen w-full">
         <img
           src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=2948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
