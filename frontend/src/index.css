@@ -23,3 +23,19 @@
 .subheading-animate {
   animation: fadeIn 4s;
 }
+
+@keyframes fillAndStrokePink {
+  from {
+     fill: currentColor;
+     stroke: currentColor;
+  }
+  to {
+     fill: pink;
+     stroke: pink;
+  }
+ }
+ 
+ .animate-fill-and-stroke-pink {
+  animation: fillAndStrokePink 0.5s ease-in-out forwards;
+ }
+ 
