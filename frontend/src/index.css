@@ -26,16 +26,15 @@
 
 @keyframes fillAndStrokePink {
   from {
-     fill: currentColor;
-     stroke: currentColor;
+    fill: currentColor;
+    stroke: currentColor;
   }
   to {
-     fill: pink;
-     stroke: pink;
+    fill: #fda4af;
+    stroke: #fda4af;
   }
- }
- 
- .animate-fill-and-stroke-pink {
-  animation: fillAndStrokePink 0.5s ease-in-out forwards;
- }
- 
+}
+
+.animate-fill-and-stroke-pink {
+  animation: fillAndStrokePink 0.2s ease-in-out forwards;
+}

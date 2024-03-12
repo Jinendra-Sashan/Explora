@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
-import { Heart } from 'lucide-react';
+import React, { useState } from "react";
+import { Heart } from "lucide-react";
 
 const FavouriteButton = () => {
- const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
- const handleClick = () => {
+  const handleClick = () => {
     setIsClicked(!isClicked);
- };
+  };
 
- return (
+  return (
     <button
       className="fixed right-6 top-6 z-50 rounded-full bg-black p-3 text-white hover:bg-getstarted-dark dark:hover:bg-getstarted-light"
       onClick={handleClick}
     >
       <Heart
-        className={`mobile:h-5 mobile:w-5 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 xl:h-7 xl:w-7 ${isClicked ? 'animate-fill-and-stroke-pink' : ''}`}
+        className={`mobile:h-5 mobile:w-5 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 xl:h-7 xl:w-7 ${isClicked ? "animate-fill-and-stroke-pink" : ""}`}
       />
     </button>
- );
+  );
 };
 
 export default FavouriteButton;
-
