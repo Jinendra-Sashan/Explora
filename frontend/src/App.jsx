@@ -9,7 +9,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<TripDetails />} />
+      <Route path="/" element={<Welcome />} />
+        <Route path="/trip" element={<TripDetails />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
       </Routes>
     </Router>
   );
