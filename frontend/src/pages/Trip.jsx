@@ -2,7 +2,7 @@ import PreviousButton from "../components/PreviousButton/PreviousButton";
 import FavouriteButton from "../components/FavouriteButton/FavouriteButton";
 import TripInformationButton from "../components/TripInformationButton/TripInformationButton";
 
-const TripDetails = () => {
+const Trip = () => {
   return (
     <div className=" fixed left-0 top-0 z-0 h-screen w-screen bg-white bg-cover bg-center dark:bg-black">
       <PreviousButton to={""}></PreviousButton>
@@ -26,4 +26,4 @@ const TripDetails = () => {
   );
 };
 
-export default TripDetails;
+export default Trip;

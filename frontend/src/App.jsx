@@ -3,14 +3,14 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import ForgotPassword from "./pages/ForgotPassword";
 import Welcome from "./pages/Welcome";
-import TripDetails from "./pages/TripDetails";
+import Trip from "./pages/Trip";
 
 function App() {
   return (
     <Router>
       <Routes>
       <Route path="/" element={<Welcome />} />
-        <Route path="/trip" element={<TripDetails />} />
+        <Route path="/trip" element={<Trip />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
