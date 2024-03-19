@@ -31,6 +31,16 @@ The essential procedures required for initiating and configuring the project wit
     npm run dev
     ```
 
+## Contributors
+
+The individuals who were involved in the development and implementation of the application.
+
+1. [Shrena Kishokumar](https://github.com/shrenakishok)
+2. [Dhilushan Sivakumar](https://github.com/SDhilu)
+3. [Adshyan Matheetharan](https://github.com/Matheetharan-Adshyan)
+4. [Sudharshan Ravichandran](https://github.com/Sudharshanravi20221703)
+5. [Jinendra Dodangoda](https://github.com/Jinendra-Sashan)
+
 
 ## License
 
