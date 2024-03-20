@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import './App.css';
-import MyComponent from './components/Checklist';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Checklist from "./pages/Checklist";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <MyComponent />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/checklist" element={<Checklist />} />
+      </Routes>
+    </Router>
   );
 }
 
