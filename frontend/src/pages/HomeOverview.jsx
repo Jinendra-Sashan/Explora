@@ -1,3 +1,4 @@
+import CreateNewJournalButton from '../components/CreateNewJournalButton/CreateNewJournalButton';
 import CreateNewTripButton from '../components/CreateNewTripButton/CreateNewTripButton';
 import NavigationLinksButton from '../components/NavigationLinksButton/NavigationLinksButton'
 import PreviousButton from '../components/PreviousButton/PreviousButton'
@@ -17,8 +18,13 @@ const HomeOverview = () => {
       <h2 className="pb-12 text-center font-primary mobile:text-base sm:text-base md:text-lg lg:text-xl xl:text-xl dark:text-white">
         Let's Plan Your Adventures For Today
       </h2>
-      <div className='grid grid-cols-2 gap-4 mr-3 ml-3'>
-        <CreateNewTripButton></CreateNewTripButton>
+      <div className='flex items-center justify-center'>
+        <div className='pr-5'>
+            <CreateNewTripButton></CreateNewTripButton>
+        </div>
+        <div>
+            <CreateNewJournalButton></CreateNewJournalButton>
+        </div>
       </div>
     </div>
         </div>
