@@ -7,4 +7,3 @@ function CreateNewTrip() {
       {/* Add form elements and other content for creating a trip */}
     </div>
   );
-}
