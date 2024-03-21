@@ -12,7 +12,29 @@
   0% {
     opacity: 0;
   }
+  50% {
+    opacity: 0.5;
+  }
   100% {
     opacity: 1;
   }
+}
+
+.subheading-animate {
+  animation: fadeIn 4s;
+}
+
+@keyframes fillAndStrokePink {
+  from {
+    fill: currentColor;
+    stroke: currentColor;
+  }
+  to {
+    fill: #fb7185;
+    stroke: #fb7185;
+  }
+}
+
+.animate-fill-and-stroke-pink {
+  animation: fillAndStrokePink 0.2s ease-in-out forwards;
 }
