@@ -24,7 +24,7 @@ const NavigationLinksButton = () => {
         )}
       </button>
       <div
-        className={`fixed right-0 top-0 h-full w-full bg-white transition-transform duration-400 ease-in-out dark:bg-black ${isOpen ? "translate-x-0 transform" : "translate-x-full transform"} md:w-2/6`}
+        className={`duration-400 fixed right-0 top-0 h-full w-full bg-white transition-transform ease-in-out dark:bg-black ${isOpen ? "translate-x-0 transform" : "translate-x-full transform"} md:w-2/6`}
       >
         <h1 className="fixed left-6 top-10 font-primary text-xl font-bold uppercase text-black dark:text-white">
           Explora
@@ -39,9 +39,11 @@ const NavigationLinksButton = () => {
           <h2 className="pb-6 font-primary text-3xl font-bold uppercase tracking-wide text-black hover:text-gray-700 lg:text-2xl xl:text-3xl dark:text-white dark:hover:text-gray-100">
             Journal
           </h2>
-          <Link to="/checklist"><h2 className="pb-6 font-primary text-3xl font-bold uppercase tracking-wide text-black hover:text-gray-700 lg:text-2xl xl:text-3xl dark:text-white dark:hover:text-gray-100">
-            Checklist
-          </h2></Link>
+          <Link to="/checklist">
+            <h2 className="pb-6 font-primary text-3xl font-bold uppercase tracking-wide text-black hover:text-gray-700 lg:text-2xl xl:text-3xl dark:text-white dark:hover:text-gray-100">
+              Checklist
+            </h2>
+          </Link>
           <h2 className="pb-6 font-primary text-3xl font-bold uppercase tracking-wide text-black hover:text-gray-700 lg:text-2xl xl:text-3xl dark:text-white dark:hover:text-gray-100">
             Expenses
           </h2>

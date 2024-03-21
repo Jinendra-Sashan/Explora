@@ -10,7 +10,7 @@ const FavouriteButton = () => {
 
   return (
     <button
-      className="fixed right-6 top-6 z-50 rounded-full bg-white p-4 text-black hover:bg-getstarted-light dark:hover:bg-getstarted-dark dark:text-white dark:bg-black"
+      className="fixed right-6 top-6 z-50 rounded-full bg-white p-4 text-black hover:bg-getstarted-light dark:bg-black dark:text-white dark:hover:bg-getstarted-dark"
       onClick={handleClick}
     >
       <Heart
