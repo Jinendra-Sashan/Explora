@@ -8,5 +8,3 @@ function CreateNewTrip() {
     </div>
   );
 }
-
-export default CreateNewTrip;

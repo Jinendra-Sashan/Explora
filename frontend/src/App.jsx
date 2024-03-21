@@ -5,7 +5,6 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Welcome from "./pages/Welcome";
 import CreateNewTrip from "./pages/CreateNewTrip";
 import Trip from "./pages/Trip";
-import HomeOverview from './pages/HomeOverview'
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
         <Route path="/" element={<Welcome />} />
         <Route path="/newtrip" element={<CreateNewTrip />} />
         <Route path="/trip" element={<Trip />} />
-        <Route path="/home" element={<HomeOverview />} />
       </Routes>
     </Router>
   );
