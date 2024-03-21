@@ -30,9 +30,11 @@ const NavigationLinksButton = () => {
           Explora
         </h1>
         <div className="flex h-screen flex-col items-center justify-center">
+          <Link to="/home">
           <h2 className="pb-6 font-primary text-3xl font-bold uppercase tracking-wide text-black hover:text-gray-700 lg:text-2xl xl:text-3xl dark:text-white dark:hover:text-gray-100">
             Home
           </h2>
+          </Link>
           <h2 className="pb-6 font-primary text-3xl font-bold uppercase tracking-wide text-black hover:text-gray-700 lg:text-2xl xl:text-3xl dark:text-white dark:hover:text-gray-100">
             Trips
           </h2>
