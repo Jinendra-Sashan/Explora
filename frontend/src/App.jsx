@@ -6,6 +6,7 @@ import Welcome from "./pages/Welcome";
 import CreateNewTrip from "./pages/CreateNewTrip";
 import Trip from "./pages/Trip";
 import HomeOverview from './pages/HomeOverview';
+import Checklist from "./pages/Checklist";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/newtrip" element={<CreateNewTrip />} />
         <Route path="/trip" element={<Trip />} />
         <Route path="/home" element={<HomeOverview />} />
+        <Route path="/checklist" element={<Checklist />} />
       </Routes>
     </Router>
   );
