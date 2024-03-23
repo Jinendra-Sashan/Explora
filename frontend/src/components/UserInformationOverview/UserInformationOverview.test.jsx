@@ -12,7 +12,7 @@ describe("UserInformationOverview", () => {
     );
 
     const headingElement = screen.getByText((content, node) => {
-      const hasText = (node) => node.textContent === "Your Explora Profile";
+      const hasText = (node) => node.textContent === "Profile";
       const nodeHasText = hasText(node);
       const childrenDontHaveText = Array.from(node.children).every(
         (child) => !hasText(child)
