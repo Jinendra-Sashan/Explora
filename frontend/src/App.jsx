@@ -7,6 +7,7 @@ import CreateNewTrip from "./pages/CreateNewTrip";
 import Trip from "./pages/Trip";
 import HomeOverview from './pages/HomeOverview';
 import Checklist from "./pages/Checklist";
+import ExistingTrips from "./pages/ExistingTrips";
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/" element={<Welcome />} />
-        <Route path="/newtrip" element={<CreateNewTrip />} />
+        <Route path="/CreateNewTrip" element={<CreateNewTrip />} />
         <Route path="/trip" element={<Trip />} />
         <Route path="/home" element={<HomeOverview />} />
         <Route path="/checklist" element={<Checklist />} />
+        <Route path="/ExistingTrips" element={<ExistingTrips />} />
       </Routes>
     </Router>
   );
