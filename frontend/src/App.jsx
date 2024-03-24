@@ -11,6 +11,7 @@ import HomeOverview from "./pages/HomeOverview";
 import Checklist from "./pages/Checklist";
 import ExistingTrips from "./pages/ExistingTrips";
 import UserInformation from "./pages/UserInformation";
+import TripDetails from "./pages/TripDetails";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/checklist" element={<Checklist />} />
         <Route path="/existingtrips" element={<ExistingTrips />} />
         <Route path="/profile" element={<UserInformation />} />
+        <Route path="/tripdetails/:tripId" element={<TripDetails />} />
       </Routes>
     </Router>
   );
