@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { InboxOutlined } from '@ant-design/icons';
 import { message, Upload } from 'antd';
@@ -16,6 +17,7 @@ function CreateNewTrip() {
   const [shortDescription, setShortDescription] = useState('');
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
+  const navigate = useNavigate();
 
   const handleTripTitleChange = (event) => {
     setTripTitle(event.target.value);
@@ -38,7 +40,7 @@ function CreateNewTrip() {
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
-
+  
   const props = {
     name: 'file',
     multiple: true,
@@ -250,8 +252,8 @@ function CreateNewTrip() {
       </div>
     </div>
     <button 
-          
-          className="bg-getstarted-customBlue hover:text-black hover:bg-white text-white font-bold py-4 px-8 rounded-full poppins text-xl ml-8 mr-8">
+          onClick={() => navigate('/TripAddedSuccessfully')}
+          className="bg-getstarted-customBlue hover:text-black hover:bg-white text-white font-bold py-4 px-8 rounded-full poppins text-xl ml-8 mr-8"> 
             Submit
           </button>
   
