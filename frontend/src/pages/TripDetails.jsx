@@ -55,8 +55,10 @@ const TripDetails = () => {
                     alt={`Trip ${trip.name} Image`}
                   />
                 ))}
-            </div>
-            ) : (<p>Loading trip details...</p>)
+             </div>
+       : (
+        <p>Loading trip details...</p>
+      )
           </div>
         </div>
       </div>
