@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
+
 import CreateNewJournalButton from '../components/CreateNewJournalButton/CreateNewJournalButton';
 import CreateNewTripButton from '../components/CreateNewTripButton/CreateNewTripButton';
 import NavigationLinksButton from '../components/NavigationLinksButton/NavigationLinksButton'
@@ -20,7 +23,10 @@ const HomeOverview = () => {
       </h2>
       <div className='flex items-center justify-center'>
         <div className='pr-5'>
-            <CreateNewTripButton></CreateNewTripButton>
+            {/* Use Link to navigate to '/trip' when button is clicked */}
+            <Link to="/trip">
+              <CreateNewTripButton></CreateNewTripButton>
+            </Link>
         </div>
         <div>
             <CreateNewJournalButton></CreateNewJournalButton>
@@ -29,7 +35,7 @@ const HomeOverview = () => {
     </div>
         </div>
         </div>
-    </div>
+        </div>
   );
 };
 
