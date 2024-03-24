@@ -1,3 +1,4 @@
+import ExistingJournalOverview from "../components/ExistingJournalOverview/ExistingJournalOverview";
 import NavigationLinksButton from "../components/NavigationLinksButton/NavigationLinksButton";
 import PreviousButton from "../components/PreviousButton/PreviousButton";
 
@@ -7,6 +8,9 @@ const ExistingJournalsList = () => {
       <div className="absolute left-0 top-0 h-full w-full bg-black/10">
         <PreviousButton></PreviousButton>
         <NavigationLinksButton></NavigationLinksButton>
+        <div className="flex items-center justify-center h-screen">
+          <ExistingJournalOverview></ExistingJournalOverview>
+        </div>
       </div>
     </div>
   );
