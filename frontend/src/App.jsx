@@ -9,9 +9,9 @@ import Trip from "./pages/Trip";
 import CreateNewTrip from "./pages/CreateNewTrip";
 import HomeOverview from "./pages/HomeOverview";
 import Checklist from "./pages/Checklist";
-import ExistingTrips from "./pages/ExistingTrips";
 import UserInformation from "./pages/UserInformation";
 import TripDetails from "./pages/TripDetails";
+import ExistingTripsList from "./pages/ExistingTripsList";
 
 function App() {
   return (
@@ -25,9 +25,9 @@ function App() {
         <Route path="/createnewtrip" element={<CreateNewTrip />} />
         <Route path="/home" element={<HomeOverview />} />
         <Route path="/checklist" element={<Checklist />} />
-        <Route path="/existingtrips" element={<ExistingTrips />} />
         <Route path="/profile" element={<UserInformation />} />
         <Route path="/tripdetails/:tripId" element={<TripDetails />} />
+        <Route path="/existingtrips" element={<ExistingTripsList />} />
       </Routes>
     </Router>
   );

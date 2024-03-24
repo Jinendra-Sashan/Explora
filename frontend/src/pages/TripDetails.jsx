@@ -6,10 +6,10 @@ import NavigationLinksButton from "../components/NavigationLinksButton/Navigatio
 import PreviousButton from "../components/PreviousButton/PreviousButton";
 
 const TripDetails = () => {
- const { tripId } = useParams();
- const [trip, setTrip] = useState(null);
+  const { tripId } = useParams();
+  const [trip, setTrip] = useState(null);
 
- useEffect(() => {
+  useEffect(() => {
     const fetchTripDetails = async () => {
       try {
         const tripDocRef = doc(firestore, "Trips", tripId);
@@ -26,9 +26,9 @@ const TripDetails = () => {
     };
 
     fetchTripDetails();
- }, [tripId]);
+  }, [tripId]);
 
- return (
+  return (
     <div className="fixed left-0 top-0 z-0 h-screen w-screen bg-[url('https://cdn.dribbble.com/userupload/12608757/file/original-7c0e168619a01690aeee929e3f60cd13.jpg?resize=2400x1803')] bg-cover bg-center">
       <div className="absolute left-0 top-0 h-full w-full bg-black/10">
         <PreviousButton to="/createnewtrip"></PreviousButton>
@@ -44,11 +44,23 @@ const TripDetails = () => {
             <div className="flex flex-col items-center justify-center">
               {trip ? (
                 <>
-                 <h1 className="pb-1"><span className="font-semibold pr-1">Trip Name:</span> {trip.name}</h1>
-                 <p className="pb-1"><span className="font-semibold pr-1">Destination:</span> {trip.destination}</p>
-                 <p className="pb-1"><span className="font-semibold pr-1">Start Date:</span>  {trip.startDate}</p>
-                 <p className="pb-5"><span className="font-semibold pr-1">End Date:</span>  {trip.endDate}</p>
-                 {trip.images &&
+                  <h1 className="pb-1">
+                    <span className="pr-1 font-semibold">Trip Name:</span>{" "}
+                    {trip.name}
+                  </h1>
+                  <p className="pb-1">
+                    <span className="pr-1 font-semibold">Destination:</span>{" "}
+                    {trip.destination}
+                  </p>
+                  <p className="pb-1">
+                    <span className="pr-1 font-semibold">Start Date:</span>{" "}
+                    {trip.startDate}
+                  </p>
+                  <p className="pb-5">
+                    <span className="pr-1 font-semibold">End Date:</span>{" "}
+                    {trip.endDate}
+                  </p>
+                  {trip.images &&
                     trip.images.map((imageUrl, index) => (
                       <img
                         key={index}
@@ -66,7 +78,7 @@ const TripDetails = () => {
         </div>
       </div>
     </div>
- );
+  );
 };
 
 export default TripDetails;
