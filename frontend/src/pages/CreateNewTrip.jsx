@@ -8,12 +8,12 @@ const CreateNewTrip = () => {
       <div className="absolute left-0 top-0 h-full w-full bg-black/10">
         <NavigationLinksButton></NavigationLinksButton>
         <PreviousButton></PreviousButton>
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex h-screen items-center justify-center">
           <CreateNewTripOverview></CreateNewTripOverview>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default CreateNewTrip;

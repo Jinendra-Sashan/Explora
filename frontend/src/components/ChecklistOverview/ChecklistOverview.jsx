@@ -192,13 +192,13 @@ const ChecklistOverview = () => {
   return (
     <div className="mx-auto max-w-lg rounded-3xl bg-white p-7 px-7 py-7 mobile:mx-auto mobile:max-w-sm md:max-w-lg md:p-10 md:px-11 md:py-11 lg:max-w-2xl dark:bg-black">
       <br />
-      <div className="flex justify-center flex-col items-center">
-      <h1 className="pb-5 font-primary text-4xl font-bold uppercase tracking-wide mobile:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl dark:text-white">
+      <div className="flex flex-col items-center justify-center">
+        <h1 className="pb-5 font-primary text-4xl font-bold uppercase tracking-wide mobile:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl dark:text-white">
           Checklists
         </h1>
         <h2 className="pb-6 font-primary text-2xl text-gray-500 mobile:text-lg sm:text-lg md:text-xl lg:text-2xl xl:text-2xl dark:text-gray-200">
           Stay Organised On Tasks While Traveling
-      </h2>
+        </h2>
       </div>
       <div className="py-12 pt-5">
         <div className="flex items-center justify-center">

@@ -18,7 +18,7 @@ export default {
           placeholderlight: "#111827",
           placeholderdark: "#fafafa",
           inputdark: "#343434",
-          customBlue: '#1A2E35',
+          customBlue: "#1A2E35",
         },
       },
       screens: {
