@@ -143,7 +143,7 @@ const ExpenseTrackerOverview = () => {
       </div>
       <div className="flex justify-center pt-6">
         <div className="w-full max-w-md">
-          <h2 className="mb-5 flex items-center justify-center text-xl font-semibold">
+          <h2 className="mb-5 flex items-center justify-center text-xl font-semibold dark:text-white">
             Expenses List
           </h2>
           <ul className="list-inside list-disc pl-2 pt-2">
@@ -169,7 +169,7 @@ const ExpenseTrackerOverview = () => {
                       onClick={() =>
                         editExpense(expense.id, editingExpense.amount)
                       }
-                      className="mr-6"
+                      className="mr-6 dark:text-white"
                     >
                       <CircleCheck className="h-6 w-6 mobile:h-5 mobile:w-5 sm:h-5 sm:w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-6 xl:w-6" />
                     </button>
@@ -177,7 +177,7 @@ const ExpenseTrackerOverview = () => {
                 ) : (
                   <>
                     <div className="ml-2 mr-2 flex items-center ">
-                      <p className="pb-2 mobile:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg">
+                      <p className="pb-2 mobile:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg dark:text-white">
                         <span className="font-semibold">
                           Expense {index + 1}:
                         </span>
