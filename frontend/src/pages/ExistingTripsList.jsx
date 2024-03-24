@@ -50,7 +50,7 @@ const ExistingTripsList = () => {
                     className="bg-gray-200 rounded-lg p-4 shadow-md flex items-center justify-between"
                   >
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+                      <h3 className="text-lg font-semibold text-gray-800 dark:text-black">
                         {trip.name}
                       </h3>
                       {/* Additional trip details can be added here */}
