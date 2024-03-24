@@ -13,6 +13,8 @@ import UserInformation from "./pages/UserInformation";
 import TripDetails from "./pages/TripDetails";
 import ExistingTripsList from "./pages/ExistingTripsList";
 import ExpenseTracker from "./pages/ExpenseTracker";
+import CreateJournal from "./pages/CreateJournal";
+import ExistingJournalsList from "./pages/ExistingJournalsList";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path="/tripdetails/:tripId" element={<TripDetails />} />
         <Route path="/existingtrips" element={<ExistingTripsList />} />
         <Route path="/expenses" element={<ExpenseTracker/>} />
+        <Route path="/createnewjournal" element={<CreateJournal/>} />
+        <Route path="/existingjournals" element={<ExistingJournalsList/>} />
       </Routes>
     </Router>
   );
