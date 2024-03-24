@@ -26,7 +26,7 @@ const CreateNewJournalOverview = () => {
         createdAt: serverTimestamp(),
       });
       alert(`Journal entry added successfully with ID: ${journalDocRef.id}`);
-      navigate(`/journalentry/${journalDocRef.id}`);
+      navigate(`/existingjournals`);
     } catch (error) {
       console.error("Error adding journal entry:", error);
     }
