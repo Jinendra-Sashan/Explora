@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom";
 
 import CreateNewJournalButton from "../components/CreateNewJournalButton/CreateNewJournalButton";
 import CreateNewTripButton from "../components/CreateNewTripButton/CreateNewTripButton";

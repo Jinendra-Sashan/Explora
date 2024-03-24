@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { firestore } from "../../firebase"; // Adjust the path as necessary
+import { firestore } from "../../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { ImagePlus, CirclePlus } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -83,7 +83,7 @@ const CreateNewJournalOverview = () => {
         <br />
         <button
           type="submit"
-          className="flex items-center rounded-full bg-black p-3 px-10 font-primary font-semibold text-white hover:bg-getstarted-dark mobile:px-9 mobile:py-2 mobile:text-xs sm:px-4 sm:py-2 sm:text-sm md:px-5 md:py-3 md:text-base lg:px-5 lg:py-3 lg:text-base xl:px-10 xl:py-3 xl:text-sm dark:bg-white dark:text-black dark:hover:bg-getstarted-light"
+          className="flex items-center rounded-full bg-black p-3 px-8 font-primary font-semibold text-white hover:bg-getstarted-dark mobile:px-4 mobile:py-2 mobile:text-xs sm:px-4 sm:py-2 sm:text-sm md:px-5 md:py-3 md:text-base lg:px-5 lg:py-3 lg:text-base xl:px-4 xl:py-3 xl:text-sm dark:bg-white dark:text-black dark:hover:bg-getstarted-light"
         >
           <CirclePlus className="mr-2 h-6 w-6 mobile:h-5 mobile:w-5 sm:h-5 sm:w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-6 xl:w-6" />
           <span>Add Journal Entry</span>
