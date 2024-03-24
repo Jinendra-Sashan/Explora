@@ -259,7 +259,7 @@ const ChecklistOverview = () => {
                   <div className="flex gap-4 pl-20 mobile:gap-0 mobile:pl-0 lg:pl-20 xl:pl-20">
                     <button
                       onClick={() => handleSaveEdit(index)}
-                      className="text-black hover:text-getstarted-dark"
+                      className="text-black hover:text-getstarted-dark dark:text-white"
                       data-testid="edit-task-button"
                     >
                       <CircleCheck className="h-6 w-6 mobile:h-5 mobile:w-5 sm:h-5 sm:w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-6 xl:w-6 dark:text-white" />
