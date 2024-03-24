@@ -44,20 +44,20 @@ const TripDetails = () => {
             <div className="flex flex-col items-center justify-center">
               {trip ? (
                 <>
-                  <h1 className="pb-1">
-                    <span className="pr-1 font-semibold">Trip Name:</span>{" "}
+                  <h1 className="pb-1 dark:text-white">
+                    <span className="pr-1 font-semibold dark:text-white">Trip Name:</span>{" "}
                     {trip.name}
                   </h1>
-                  <p className="pb-1">
-                    <span className="pr-1 font-semibold">Destination:</span>{" "}
+                  <p className="pb-1 dark:text-white">
+                    <span className="pr-1 font-semibold dark:text-white">Destination:</span>{" "}
                     {trip.destination}
                   </p>
-                  <p className="pb-1">
-                    <span className="pr-1 font-semibold">Start Date:</span>{" "}
+                  <p className="pb-1 dark:text-white">
+                    <span className="pr-1 font-semibold dark:text-white">Start Date:</span>{" "}
                     {trip.startDate}
                   </p>
-                  <p className="pb-5">
-                    <span className="pr-1 font-semibold">End Date:</span>{" "}
+                  <p className="pb-5 dark:text-white">
+                    <span className="pr-1 font-semibold dark:text-white">End Date:</span>{" "}
                     {trip.endDate}
                   </p>
                   {trip.images &&
@@ -71,7 +71,7 @@ const TripDetails = () => {
                     ))}
                 </>
               ) : (
-                <p>Loading trip details...</p>
+                <p className="dark:text-white">Loading trip details...</p>
               )}
             </div>
           </div>
