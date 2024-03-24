@@ -1,31 +1,30 @@
-import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import ExpenseTrackerOverview from './ExpenseTrackerOverview';
+import React from "react";
+import { render, fireEvent, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
+import ExpenseTrackerOverview from "./ExpenseTrackerOverview";
 
-describe('ExpenseTrackerOverview', () => {
- it('renders the component', () => {
+describe("ExpenseTrackerOverview", () => {
+  it("renders the component", () => {
     render(
       <MemoryRouter>
         <ExpenseTrackerOverview />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
-    expect(screen.getByText('Expense Tracker')).toBeInTheDocument();
- });
+    expect(screen.getByText("Expense Tracker")).toBeInTheDocument();
+  });
 
- it('adds a new expense', () => {
+  it("adds a new expense", () => {
     render(
       <MemoryRouter>
         <ExpenseTrackerOverview />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
-    const input = screen.getByPlaceholderText('Enter Your Expenses');
-    fireEvent.change(input, { target: { value: '100' } });
-    fireEvent.click(screen.getByTestId('add-task-button'));
+    const input = screen.getByPlaceholderText("Enter Your Expenses");
+    fireEvent.change(input, { target: { value: "100" } });
+    fireEvent.click(screen.getByTestId("add-task-button"));
 
-    expect(input.value).toBe('100');
- });
-
+    expect(input.value).toBe("100");
+  });
 });

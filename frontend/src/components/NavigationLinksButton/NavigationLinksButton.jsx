@@ -50,9 +50,9 @@ const NavigationLinksButton = () => {
             </h2>
           </Link>
           <Link to="/expenses">
-          <h2 className="pb-6 font-primary text-3xl font-bold uppercase tracking-wide text-black hover:text-gray-700 lg:text-2xl xl:text-3xl dark:text-white dark:hover:text-gray-100">
-            Expenses
-          </h2>
+            <h2 className="pb-6 font-primary text-3xl font-bold uppercase tracking-wide text-black hover:text-gray-700 lg:text-2xl xl:text-3xl dark:text-white dark:hover:text-gray-100">
+              Expenses
+            </h2>
           </Link>
         </div>
         <ExploraProfileButton />

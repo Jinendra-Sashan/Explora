@@ -176,28 +176,32 @@ const ExpenseTrackerOverview = () => {
                   </>
                 ) : (
                   <>
-                  <div className="flex items-center ml-2 mr-2 ">
-                    <p className="pb-2 mobile:text-sm sm:text-base md:text-base xl:text-lg lg:text-lg">
-                      <span className="font-semibold">Expense {index + 1}:</span>
-                      <span className="pl-2">${expense.amount.toFixed(2)}</span>
-                    </p>
-                    <div className="flex gap-4 pl-44 mobile:pl-20 sm:pl-20 lg:pl-44 xl:pl-44">
-                      <button
-                        onClick={() => {
-                          setEditingExpense(expense);
-                          setIsEditing(true);
-                        }}
-                        className="text-black dark:text-white"
-                      >
-                        <SquarePen className="h-6 w-6 mobile:h-5 mobile:w-5 sm:h-5 sm:w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-6 xl:w-6" />
-                      </button>
-                      <button
-                        onClick={() => deleteExpense(expense.id)}
-                        className="text-red-500 hover:text-red-400 dark:text-red-400 hover:dark:text-red-300"
-                      >
-                        <CircleX className="h-6 w-6 mobile:h-5 mobile:w-5 sm:h-5 sm:w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-6 xl:w-6" />
-                      </button>
-                    </div>
+                    <div className="ml-2 mr-2 flex items-center ">
+                      <p className="pb-2 mobile:text-sm sm:text-base md:text-base lg:text-lg xl:text-lg">
+                        <span className="font-semibold">
+                          Expense {index + 1}:
+                        </span>
+                        <span className="pl-2">
+                          ${expense.amount.toFixed(2)}
+                        </span>
+                      </p>
+                      <div className="flex gap-4 pl-44 mobile:pl-20 sm:pl-20 lg:pl-44 xl:pl-44">
+                        <button
+                          onClick={() => {
+                            setEditingExpense(expense);
+                            setIsEditing(true);
+                          }}
+                          className="text-black dark:text-white"
+                        >
+                          <SquarePen className="h-6 w-6 mobile:h-5 mobile:w-5 sm:h-5 sm:w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-6 xl:w-6" />
+                        </button>
+                        <button
+                          onClick={() => deleteExpense(expense.id)}
+                          className="text-red-500 hover:text-red-400 dark:text-red-400 hover:dark:text-red-300"
+                        >
+                          <CircleX className="h-6 w-6 mobile:h-5 mobile:w-5 sm:h-5 sm:w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-6 xl:w-6" />
+                        </button>
+                      </div>
                     </div>
                   </>
                 )}

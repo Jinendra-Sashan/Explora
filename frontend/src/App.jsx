@@ -31,9 +31,9 @@ function App() {
         <Route path="/profile" element={<UserInformation />} />
         <Route path="/tripdetails/:tripId" element={<TripDetails />} />
         <Route path="/existingtrips" element={<ExistingTripsList />} />
-        <Route path="/expenses" element={<ExpenseTracker/>} />
-        <Route path="/createnewjournal" element={<CreateJournal/>} />
-        <Route path="/existingjournals" element={<ExistingJournalsList/>} />
+        <Route path="/expenses" element={<ExpenseTracker />} />
+        <Route path="/createnewjournal" element={<CreateJournal />} />
+        <Route path="/existingjournals" element={<ExistingJournalsList />} />
       </Routes>
     </Router>
   );

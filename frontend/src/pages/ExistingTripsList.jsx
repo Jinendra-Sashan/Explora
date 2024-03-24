@@ -33,7 +33,7 @@ const ExistingTripsList = () => {
       <div className="absolute left-0 top-0 h-full w-full bg-black/10">
         <NavigationLinksButton />
         <PreviousButton />
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex h-screen items-center justify-center">
           <div className="mx-auto max-w-lg rounded-3xl bg-white p-7 px-7 py-7 mobile:mx-auto mobile:max-w-sm md:max-w-lg md:p-10 md:px-11 md:py-11 lg:max-w-2xl dark:bg-black">
             <h1 className="pb-10 text-center font-primary font-semibold uppercase tracking-wider mobile:text-2xl sm:text-2xl md:text-3xl lg:text-4xl dark:text-white">
               Welcome To Trips
@@ -41,13 +41,15 @@ const ExistingTripsList = () => {
             <h2 className="pb-12 text-center font-primary mobile:text-base sm:text-base md:text-lg lg:text-xl xl:text-xl dark:text-white">
               Let's See Your Existing Trips
             </h2>
-            <div className="flex items-center justify-center flex-col">
-              <h1 className="pb-3 font-semibold dark:text-white">Existing Trips</h1>
+            <div className="flex flex-col items-center justify-center">
+              <h1 className="pb-3 font-semibold dark:text-white">
+                Existing Trips
+              </h1>
               <div className="grid grid-cols-1 gap-4">
                 {trips.map((trip) => (
                   <div
                     key={trip.id}
-                    className="bg-gray-200 rounded-lg p-4 shadow-md flex items-center justify-between"
+                    className="flex items-center justify-between rounded-lg bg-gray-200 p-4 shadow-md"
                   >
                     <div>
                       <h3 className="text-lg font-semibold text-gray-800 dark:text-black">
@@ -57,7 +59,7 @@ const ExistingTripsList = () => {
                     </div>
                     <Link
                       to={`/tripdetails/${trip.id}`}
-                      className="px-4 py-2 bg-black text-white rounded-md hover:bg-white hover:text-black"
+                      className="rounded-md bg-black px-4 py-2 text-white hover:bg-white hover:text-black"
                     >
                       View
                     </Link>
