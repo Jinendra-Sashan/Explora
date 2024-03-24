@@ -12,6 +12,7 @@ import Checklist from "./pages/Checklist";
 import UserInformation from "./pages/UserInformation";
 import TripDetails from "./pages/TripDetails";
 import ExistingTripsList from "./pages/ExistingTripsList";
+import ExpenseTracker from "./pages/ExpenseTracker";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/profile" element={<UserInformation />} />
         <Route path="/tripdetails/:tripId" element={<TripDetails />} />
         <Route path="/existingtrips" element={<ExistingTripsList />} />
+        <Route path="/expenses" element={<ExpenseTracker/>} />
       </Routes>
     </Router>
   );
