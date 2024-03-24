@@ -67,7 +67,7 @@ const CreateNewJournalOverview = () => {
         <div className="flex items-center justify-center pt-7">
           <label
             htmlFor="images"
-            className="flex cursor-pointer items-center rounded-full bg-black px-4 py-2 font-primary font-semibold text-white hover:bg-getstarted-dark mobile:px-4 mobile:py-2 mobile:text-xs sm:px-4 sm:py-2 sm:text-xs md:px-5 md:py-3 md:text-sm lg:px-5 lg:py-3 lg:text-sm xl:px-5 xl:py-3 xl:text-sm"
+            className="flex cursor-pointer items-center rounded-full bg-black px-4 py-2 font-primary font-semibold text-white hover:bg-getstarted-dark mobile:px-4 mobile:py-2 mobile:text-xs sm:px-4 sm:py-2 sm:text-xs md:px-5 md:py-3 md:text-sm lg:px-5 lg:py-3 lg:text-sm xl:px-5 xl:py-3 xl:text-sm dark:bg-white dark:text-black"
           >
             <ImagePlus className="mr-2 h-6 w-6 mobile:h-5 mobile:w-5 sm:h-5 sm:w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-6 xl:w-6" />
             Upload Images

@@ -61,17 +61,19 @@ const ExistingJournalOverview = () => {
                  value={editingJournal.title}
                  onChange={(e) => setEditingJournal({ ...editingJournal, title: e.target.value })}
                  placeholder="Title"
+                 className="font-primary text-lg outline-none mobile:text-base sm:text-base md:text-base lg:text-lg xl:text-lg dark:bg-black dark:text-white"
                 />
                 <textarea
                  value={editingJournal.content}
                  onChange={(e) => setEditingJournal({ ...editingJournal, content: e.target.value })}
                  placeholder="Content"
+                 className="font-primary text-lg outline-none mobile:text-base sm:text-base md:text-base lg:text-lg xl:text-lg dark:bg-black dark:text-white"
                 />
-                <button onClick={() => handleSave(journal.id)}><CircleCheck className="h-6 w-6 mobile:h-5 mobile:w-5 sm:h-5 sm:w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-6 xl:w-6 dark:text-white" /></button>
+                <button onClick={() => handleSave(journal.id)} className='className="text-black hover:text-getstarted-dark dark:text-white'><CircleCheck className="h-6 w-6 mobile:h-5 mobile:w-5 sm:h-5 sm:w-5 md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-6 xl:w-6 dark:text-white" /></button>
               </>
             ) : (
               <>
-                <h2 className="text-xl font-semibold">{journal.title}</h2>
+                <h2 className="text-xl font-semibold dark:text-white">{journal.title}</h2>
                 <p className="text-gray-600 dark:text-gray-400">{journal.content}</p>
                 <div className='pt-3 flex'>
                 <div className='flex'>
