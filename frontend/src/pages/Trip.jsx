@@ -3,12 +3,12 @@ import ballon from '../assets/Ballon.png';
 import NavigationLinksButton from "../components/NavigationLinksButton/NavigationLinksButton";
 
 const Trip = () => {
-  const navigate = useNavigate(); // Access the navigate function
+  const navigate = useNavigate(); 
 
   return (
 
     <div className="fixed left-0 top-0 z-0 h-screen w-screen">
-    {/* Div for the background image with blur effect */}
+
     <div
       className="absolute left-0 top-0 w-full h-full bg-[url('https://cdn.dribbble.com/userupload/12608757/file/original-7c0e168619a01690aeee929e3f60cd13.jpg?resize=2400x1803')] bg-cover bg-center filter blur-lg"
       style={{ zIndex: -1 }}
@@ -16,7 +16,7 @@ const Trip = () => {
       <img
         src={ballon}
         alt="Ballon"
-        className="absolute top-25 right-0 transform y-40 z-1" // Adjusted positioning
+        className="absolute top-25 right-0 transform y-40 z-1" 
       />
         
         <NavigationLinksButton></NavigationLinksButton>
