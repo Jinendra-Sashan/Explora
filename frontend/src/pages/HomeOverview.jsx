@@ -23,7 +23,6 @@ const HomeOverview = () => {
       </h2>
       <div className='flex items-center justify-center'>
         <div className='pr-5'>
-            {/* Use Link to navigate to '/trip' when button is clicked */}
             <Link to="/trip">
               <CreateNewTripButton></CreateNewTripButton>
             </Link>

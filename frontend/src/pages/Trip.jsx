@@ -1,46 +1,36 @@
-import { useNavigate } from 'react-router-dom';
-import ballon from '../assets/Ballon.png';
 import NavigationLinksButton from "../components/NavigationLinksButton/NavigationLinksButton";
+import OpenExistingTripButton from "../components/OpenExistingTripButton/OpenExistingTripButton";
+import OpenNewTripButton from "../components/OpenNewTripButton/OpenNewTripButton";
+import PreviousButton from '../components/PreviousButton/PreviousButton'
 
 const Trip = () => {
-  const navigate = useNavigate(); 
-
   return (
-
-    <div className="fixed left-0 top-0 z-0 h-screen w-screen">
-
-    <div
-      className="absolute left-0 top-0 w-full h-full bg-[url('https://cdn.dribbble.com/userupload/12608757/file/original-7c0e168619a01690aeee929e3f60cd13.jpg?resize=2400x1803')] bg-cover bg-center filter blur-lg"
-      style={{ zIndex: -1 }}
-    ></div>
-      <img
-        src={ballon}
-        alt="Ballon"
-        className="absolute top-25 right-0 transform y-40 z-1" 
-      />
-        
-        <NavigationLinksButton></NavigationLinksButton>
+    <div className="fixed left-0 top-0 z-0 h-screen w-screen bg-[url('https://cdn.dribbble.com/userupload/12608757/file/original-7c0e168619a01690aeee929e3f60cd13.jpg?resize=2400x1803')] bg-cover bg-center">
+      <div className="absolute left-0 top-0 h-full w-full bg-black/10">
+      <NavigationLinksButton></NavigationLinksButton>
+      <PreviousButton></PreviousButton>
       <div className="flex h-screen flex-col items-center justify-center">
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-2">
-       <h1 className="text-3xl font-bold text-center mb-16 poppins">Trips</h1>
-        <div className="flex justify-center gap-2">
-          <button
-            className="bg-getstarted-customBlue hover:text-black hover:bg-white text-white font-bold py-4 px-8 rounded-full poppins text-xl ml-8 mr-8"
-            onClick={() => navigate('/CreateNewTrip')}
-          >
-            Create New Trip
-          </button>
-          <button 
-          onClick={() => navigate('/ExistingTrips')}
-          className="bg-getstarted-customBlue hover:text-black hover:bg-white text-white font-bold py-4 px-8 rounded-full poppins text-xl ml-8 mr-8">
-            Open Existing Trip
-          </button>
+      <div className="mx-auto max-w-lg rounded-3xl bg-white p-7 px-7 py-7 mobile:mx-auto mobile:max-w-sm md:max-w-lg md:p-10 md:px-11 md:py-11 lg:max-w-2xl dark:bg-black">
+        <br />
+        <h1 className="pb-10 text-center font-primary font-semibold uppercase tracking-wider mobile:text-2xl sm:text-2xl md:text-3xl lg:text-4xl dark:text-white">
+        Welcome To Trips
+      </h1>
+      <h2 className="pb-12 text-center font-primary mobile:text-base sm:text-base md:text-lg lg:text-xl xl:text-xl dark:text-white">
+        Let's Plan Your Upcoming Trips
+      </h2>
+      <div className='flex items-center justify-center'>
+        <div className="pr-5">
+          <OpenNewTripButton></OpenNewTripButton>
         </div>
-        </div>
+        <div>
+          <OpenExistingTripButton></OpenExistingTripButton>
         </div>
       </div>
-  
-  );
-};
+      </div>
+      </div>
+      </div>
+    </div>
+  )
+}
 
 export default Trip;
