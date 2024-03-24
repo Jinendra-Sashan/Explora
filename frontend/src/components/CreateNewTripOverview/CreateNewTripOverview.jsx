@@ -1,27 +1,28 @@
 import React, { useState } from "react";
 import { firestore } from "../../firebase";
-import { addDoc } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { ImagePlus, CirclePlus } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const CreateNewTripOverview = () => {
-  const [tripName, setTripName] = useState("");
-  const [destination, setDestination] = useState("");
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
-  const [details, setDetails] = useState("");
-  const [images, setImages] = useState([]);
-  const navigate = useNavigate();
+ const [tripName, setTripName] = useState("");
+ const [destination, setDestination] = useState("");
+ const [startDate, setStartDate] = useState("");
+ const [endDate, setEndDate] = useState("");
+ const [details, setDetails] = useState("");
+ const [images, setImages] = useState([]);
+ const navigate = useNavigate();
 
-  const handleImageChange = (e) => {
+ const handleImageChange = (e) => {
     const files = Array.from(e.target.files);
     setImages(files.map((file) => ({ file, url: URL.createObjectURL(file) })));
-  };
+ };
 
-  const handleAddTrip = async (e) => {
+ const handleAddTrip = async (e) => {
     e.preventDefault();
     try {
-      const tripDocRef = await addDoc(firestore, "Trips", {
+      const tripCollectionRef = collection(firestore, "Trips");
+      const tripDocRef = await addDoc(tripCollectionRef, {
         name: tripName,
         destination: destination,
         startDate: startDate,
@@ -34,9 +35,9 @@ const CreateNewTripOverview = () => {
     } catch (error) {
       console.error("Error adding trip:", error);
     }
-  };
+ };
 
-  return (
+ return (
     <div className="mx-auto max-w-lg rounded-3xl bg-white p-7 px-7 py-7 mobile:mx-auto mobile:max-w-sm md:max-w-lg md:p-10 md:px-11 md:py-11 lg:max-w-2xl dark:bg-black">
       <br />
       <h1 className="pb-10 text-center font-primary font-semibold uppercase tracking-wider mobile:text-2xl sm:text-2xl md:text-3xl lg:text-4xl dark:text-white">
@@ -117,7 +118,7 @@ const CreateNewTripOverview = () => {
         </button>
       </form>
     </div>
-  );
+ );
 };
 
 export default CreateNewTripOverview;
