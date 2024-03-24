@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import NavigationLinksButton from "../components/NavigationLinksButton/NavigationLinksButton";
 import OpenExistingTripButton from "../components/OpenExistingTripButton/OpenExistingTripButton";
 import OpenNewTripButton from "../components/OpenNewTripButton/OpenNewTripButton";
