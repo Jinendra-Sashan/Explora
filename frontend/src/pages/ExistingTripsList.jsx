@@ -52,10 +52,25 @@ const ExistingTripsList = () => {
                     className="flex items-center justify-between rounded-lg bg-gray-200 p-4 shadow-md"
                   >
                     <div>
+                      <img
+                        src={trip.image}
+                        alt={trip.name}
+                        className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mr-4"
+                      />
+                    </div>
+                    <div className="flex flex-col">
                       <h3 className="text-lg font-semibold text-gray-800 dark:text-black">
                         {trip.name}
                       </h3>
-                      {/* Additional trip details can be added here */}
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Location: {trip.location}
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Date: {trip.date}
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Description: {trip.description}
+                      </p>
                     </div>
                     <Link
                       to={`/tripdetails/${trip.id}`}
