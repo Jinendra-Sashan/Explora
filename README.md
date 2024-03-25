@@ -20,12 +20,18 @@ The essential procedures required for initiating and configuring the project wit
     git clone https://github.com/Matheetharan-Adshyan/Explora.git
     ```
 
-2. Install the required Node Package Manager (npm) packages and dependencies.
+2. Navigate To The Frontend Folder
+
+   ```sh
+   cd frontend
+   ```
+
+4. Install the required Node Package Manager (npm) packages and dependencies.
 
     ```sh
     npm install
     ```
-3. Launch the application via localhost, and then access it through the browser.
+5. Launch the application via localhost, and then access it through the browser.
 
     ```sh
     npm run dev
