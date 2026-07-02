@@ -18,7 +18,7 @@ import ExistingJournalsList from "./pages/ExistingJournalsList";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Explora"> {/* 👈 Add the basename attribute here */}
       <Routes>
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
