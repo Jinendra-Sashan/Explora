@@ -14,6 +14,7 @@ export default function WeatherWidget() {
       async (position) => {
         try {
           const { latitude, longitude } = position.coords;
+          // ⬇️ FIXED ENDPOINT PATH
           const res = await fetch(
             `https://open-meteo.com{latitude}&longitude=${longitude}&current_weather=true`
           );

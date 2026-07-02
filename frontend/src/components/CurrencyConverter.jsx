@@ -8,8 +8,7 @@ export default function CurrencyConverter() {
   const [result, setResult] = useState("");
 
   useEffect(() => {
-    // ⬇️ Fixed the complete base URL address routing path here
-    fetch(`https://jsdelivr.net{from.toLowerCase()}.json`)
+    fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${from.toLowerCase()}.json`)
       .then((res) => res.json())
       .then((data) => setRates(data[from.toLowerCase()]))
       .catch((err) => console.error("Error fetching conversion rates:", err));
@@ -32,17 +31,17 @@ export default function CurrencyConverter() {
           type="number"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          className="w-full p-2 border border-gray-200 rounded-lg text-sm"
+          className="w-full p-2 border border-gray-200 rounded-lg text-sm text-black"
           placeholder="Amount"
         />
         <div className="grid grid-cols-2 gap-2">
-          <select value={from} onChange={(e) => setFrom(e.target.value)} className="p-2 border rounded-lg text-sm bg-gray-50">
+          <select value={from} onChange={(e) => setFrom(e.target.value)} className="p-2 border rounded-lg text-sm bg-gray-50 text-black">
             <option value="USD">USD - US Dollar</option>
             <option value="EUR">EUR - Euro</option>
             <option value="LKR">LKR - Sri Lankan Rupee</option>
             <option value="GBP">GBP - British Pound</option>
           </select>
-          <select value={to} onChange={(e) => setTo(e.target.value)} className="p-2 border rounded-lg text-sm bg-gray-50">
+          <select value={to} onChange={(e) => setTo(e.target.value)} className="p-2 border rounded-lg text-sm bg-gray-50 text-black">
             <option value="LKR">LKR - Sri Lankan Rupee</option>
             <option value="USD">USD - US Dollar</option>
             <option value="EUR">EUR - Euro</option>
