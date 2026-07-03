@@ -14,12 +14,12 @@ export default function WeatherWidget() {
       async (position) => {
         try {
           const { latitude, longitude } = position.coords;
-          // ⬇️ FIXED ENDPOINT PATH
+          
           const res = await fetch(
-            `https://open-meteo.com{latitude}&longitude=${longitude}&current_weather=true`
+            `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m,weather_code`
           );
           const data = await res.json();
-          setWeather(data.current_weather);
+          setWeather(data.current);
         } catch (err) {
           setError("Failed to fetch weather data");
         }
@@ -37,11 +37,11 @@ export default function WeatherWidget() {
       {weather ? (
         <div className="flex items-center justify-between mt-2">
           <div>
-            <p className="text-3xl font-extrabold text-gray-900">{weather.temperature}°C</p>
-            <p className="text-xs text-gray-400 mt-1">Wind Speed: {weather.windspeed} km/h</p>
+            <p className="text-3xl font-extrabold text-gray-900">{weather.temperature_2m}°C</p>
+            <p className="text-xs text-gray-400 mt-1">Wind Speed: {weather.wind_speed_10m} km/h</p>
           </div>
           <span className="text-4xl">
-            {weather.weathercode <= 3 ? "🌤️" : weather.weathercode <= 65 ? "🌧️" : "⛈️"}
+            {weather.weathercode <= 3 ? "🌤️" : weather.weather_code <= 65 ? "🌧️" : "⛈️"}
           </span>
         </div>
       ) : (

@@ -6,40 +6,45 @@ export default function LandmarkDetector() {
   const [preview, setPreview] = useState(null);
 
   const handleImageUpload = async (event) => {
-    const file = event.target.files[0]; 
+    const file = event.target.files[0];
     if (!file) return;
 
     setPreview(URL.createObjectURL(file));
     setLoading(true);
-    setResult("Analyzing landmark details...");
+    setResult("Analyzing landmark...");
 
     try {
-      // ⬇️ FIXED URL: Must point to api-inference, NOT the main website address to avoid CORS blocks
+      const formData = new FormData();
+      formData.append("image", file);
+
       const response = await fetch(
-        "https://huggingface.co",
+        "http://localhost:5000/detect-landmark",
         {
-          headers: { Authorization: `Bearer ${import.meta.env.VITE_HF_TOKEN}` },
           method: "POST",
-          body: file, 
+          body: formData,
         }
       );
-      
-      const data = await response.json();
-      console.log("AI API Response Data:", data);
 
-      // ⬇️ FIXED DATA PARSING: Reads the label out of the first object in the response array
-      if (Array.isArray(data) && data.length > 0 && data[0].label) {
-        const rawLabel = data[0].label;
-        const topMatch = rawLabel.split(",")[0].replace(/_/g, " ");
-        const formattedMatch = topMatch.charAt(0).toUpperCase() + topMatch.slice(1);
-        setResult(formattedMatch);
-      } else if (data && data.error) {
-        setResult(`API Error: ${data.error}`);
+      const data = await response.json();
+
+      console.log("OpenAI Response:", data);
+
+      if (data.landmark) {
+        setResult(
+          `📍 Landmark: ${data.landmark}
+
+🌍 Country: ${data.country}
+
+📖 Description:
+${data.description}`
+        );
+      } else if (data.error) {
+        setResult(`Error: ${data.error}`);
       } else {
-        setResult("Unknown Object or Landmark");
+        setResult("Unknown landmark.");
       }
     } catch (error) {
-      console.error("Scanning Error Log:", error);
+      console.error("Scanning Error:", error);
       setResult("Could not process image.");
     } finally {
       setLoading(false);
@@ -54,7 +59,12 @@ export default function LandmarkDetector() {
 
       {preview && (
         <div className="mb-3 relative rounded-xl overflow-hidden h-40 bg-gray-50 border border-gray-100">
-          <img src={preview} alt="Preview" className="w-full h-full object-cover" />
+          <img
+            src={preview}
+            alt="Preview"
+            className="w-full h-full object-cover"
+          />
+
           {loading && (
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-white font-medium text-xs animate-pulse">
               Running AI Identification...
@@ -65,22 +75,33 @@ export default function LandmarkDetector() {
 
       <div className="w-full">
         <label className="flex flex-col items-center justify-center w-full h-24 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors">
-          <span className="text-xs font-semibold text-gray-500">Click to upload photo</span>
-          <span className="text-[10px] text-gray-400 mt-1">PNG, JPG, or WebP</span>
-          <input 
-            type="file" 
-            accept="image/*" 
-            onChange={handleImageUpload} 
-            className="hidden" 
-            disabled={loading} 
+          <span className="text-xs font-semibold text-gray-500">
+            Click to upload photo
+          </span>
+
+          <span className="text-[10px] text-gray-400 mt-1">
+            PNG, JPG, or WebP
+          </span>
+
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageUpload}
+            className="hidden"
+            disabled={loading}
           />
         </label>
       </div>
 
       {result && (
-        <div className="mt-3 p-3 bg-blue-50/50 border border-blue-100 rounded-xl">
-          <span className="text-[10px] font-bold text-blue-500 uppercase tracking-wider block">Result</span>
-          <p className="text-gray-800 font-bold text-sm mt-0.5">{result}</p>
+        <div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-xl whitespace-pre-line">
+          <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider block">
+            Result
+          </span>
+
+          <p className="text-gray-800 font-medium mt-1">
+            {result}
+          </p>
         </div>
       )}
     </div>
