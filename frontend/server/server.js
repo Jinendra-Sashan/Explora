@@ -63,11 +63,19 @@ If it is not a landmark, return:
       ]
     });
 
-    // Delete temporary uploaded file
+    // Delete uploaded file
     fs.unlinkSync(req.file.path);
 
-    // Return AI response
-    res.json(JSON.parse(response.output_text));
+    // Clean the AI response before parsing
+let text = response.output_text.trim();
+
+text = text
+  .replace(/^```json/, "")
+  .replace(/^```/, "")
+  .replace(/```$/, "")
+  .trim();
+
+res.json(JSON.parse(text));
 
   } catch (err) {
     console.error(err);
